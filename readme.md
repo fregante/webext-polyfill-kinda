@@ -3,14 +3,15 @@
 [badge-gzip]: https://img.shields.io/bundlephobia/minzip/webext-polyfill-kinda.svg?label=gzipped
 [link-bundlephobia]: https://bundlephobia.com/result?p=webext-polyfill-kinda
 
-> Super-lightweight Promised wrapper around `chrome.*` APIs to be used in modules. Defaults to `browser.*` APIs if available. Not every API is fully supported.
+> Super-lightweight Promised wrapper around `chrome.*` APIs to be used in modules.
 
-- ✅ Use this module when publishing your own micro-modules. This avoids having to import `webextension-polyfill` as a sub-dependency.
-- ❌ Do not use this module if you need promised APIs directly in your extension. [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) is much safer.
+✅ Use this module when publishing your own micro-modules. This avoids having to import `webextension-polyfill` as a sub-dependency.
 
-Warning: This package isn't completely safe to use because it blindly wraps the `chrome.*` APIs whether it supports them or not.
+❌ Do not use this module if you need promised APIs directly in your extension. [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) is much safer.
 
-Warning: This package automatically uses `browser.*` APIs when available, even if it's just being polyfilled by the extension.
+⚠️ This package isn't completely safe to use because it blindly wraps the `chrome.*` APIs whether it supports them or not.
+
+⚠️ This package automatically uses `browser.*` APIs when available, even if it's just being polyfilled by the extension.
 
 Please test your module in every browser before assuming it works, or prefer `webextension-polyfill`.
 
