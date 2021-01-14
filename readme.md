@@ -32,7 +32,7 @@ import chromeP from 'webext-polyfill-kinda';
 
 	// Do not use `chromeP` when dealing with listeners, it doesn't make sense. Use the native `chrome.*` API
 	chrome.tabs.onUpdated.addListener(listener);
-})()
+})();
 ```
 
 ## Related

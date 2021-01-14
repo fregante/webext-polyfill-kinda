@@ -19,6 +19,7 @@
 	"type": "module",
 	"main": "index.js",
 	"module": "index.js",
+	"types": "./index.d.ts",
 	"files": [
 		"index.js",
 		"index.d.ts"
@@ -33,6 +34,6 @@
 		]
 	},
 	"devDependencies": {
-		"xo": "^0.30.0"
+		"xo": "^0.37.1"
 	}
 }
