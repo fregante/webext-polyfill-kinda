@@ -9,7 +9,7 @@ function NestedProxy(target) {
 				new Promise((resolve, reject) => {
 					target[prop](...arguments_, result => {
 						if (chrome.runtime.lastError) {
-							reject(chrome.runtime.lastError);
+							reject(new Error(chrome.runtime.lastError.message));
 						} else {
 							resolve(result);
 						}
