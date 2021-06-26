@@ -34,6 +34,14 @@ import chromeP from 'webext-polyfill-kinda';
 })();
 ```
 
+## TypeScript Usage
+
+`chromeP` will reuse the global `browser` type if it exists. The suggested solution is to also install this, the types will be automatically available.
+
+```sh
+npm install @types/firefox-webext-browser --save-dev
+```
+
 ## Related
 
 - [webext-options-sync](https://github.com/fregante/webext-options-sync) - Helps you manage and autosave your extension's options. Chrome and Firefox.
