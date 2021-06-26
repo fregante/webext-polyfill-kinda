@@ -19,8 +19,6 @@ function NestedProxy(target) {
 	});
 }
 
-const chromeP =
-	typeof window === 'object' && // Avoid error when executed in node
-	(window.browser || new NestedProxy(window.chrome));
+const chromeP = globalThis.window?.chrome && new NestedProxy(window.chrome);
 
 export default chromeP;

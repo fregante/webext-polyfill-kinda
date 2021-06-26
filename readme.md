@@ -11,8 +11,6 @@
 
 ⚠️ This package isn't completely safe to use because it blindly wraps the `chrome.*` APIs whether it supports them or not.
 
-⚠️ This package automatically uses `browser.*` APIs when available, even if it's just being polyfilled by the extension.
-
 Please test your module in every browser before assuming it works, or prefer `webextension-polyfill`.
 
 ## Install
