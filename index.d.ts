@@ -23,6 +23,30 @@ declare global {
 		 */
 		function removeCachedAuthToken(
 			details: _RemoveCachedAuthTokenDetails
-		): Promise<_RemoveCachedAuthTokenReturnUserinfo>;
+		): Promise<void>;
 	}
 }
+
+import removeCachedAuthToken = chrome.identity.removeCachedAuthToken;
+// -> (callback: (status: RequestUpdateCheckStatus, details?: UpdateCheckDetails) => void): void
+
+type Promisify<
+	Type,
+	Arg1 extends unknown = unknown,
+	Arg2 extends unknown = unknown,
+	Arg3 extends unknown = unknown,
+	Arg4 extends unknown = unknown
+> = Type extends (cb: (arg?: infer Arg) => void) => void
+	? () => Promise<Arg>
+	: Type extends (a: Arg1, cb: (arg?: infer Arg) => void) => void
+	? (a: Arg1) => Promise<Arg>
+	: Type extends (a: Arg1, b: Arg2, cb: (arg?: infer Arg) => void) => void
+	? (a: Arg1, b: Arg2) => Promise<Arg>
+	: Type extends (a: Arg1, b: Arg2, c: Arg3, cb: (arg?: infer Arg) => void) => void
+	? (a: Arg1, b: Arg2, c: Arg3) => Promise<Arg>
+	: Type extends (a: Arg1, b: Arg2, c: Arg3, d: Arg4, cb: (arg?: infer Arg) => void) => void
+	? (a: Arg1, b: Arg2, c: Arg3, d: Arg4) => Promise<Arg>
+	: never;
+
+type promisified = Promisify<typeof removeCachedAuthToken>
+// ->  () => Promise<chrome.runtime.RequestUpdateCheckStatus>
