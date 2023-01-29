@@ -34,6 +34,7 @@
 		]
 	},
 	"devDependencies": {
+		"@types/chrome": "^0.0.210",
 		"xo": "^0.53.1"
 	}
 }
