@@ -15,7 +15,7 @@ function NestedProxy(target) {
 						}
 					});
 				});
-		}
+		},
 	});
 }
 
