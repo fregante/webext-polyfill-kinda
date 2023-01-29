@@ -14,6 +14,7 @@
 		"proxy"
 	],
 	"repository": "fregante/webext-polyfill-kinda",
+	"funding": "https://github.com/sponsors/fregante",
 	"license": "MIT",
 	"author": "Federico Brigante <me@fregante.com> (https://fregante.com)",
 	"type": "module",
@@ -34,6 +35,7 @@
 		]
 	},
 	"devDependencies": {
-		"xo": "^0.40.3"
+		"@types/chrome": "^0.0.210",
+		"xo": "^0.53.1"
 	}
 }

@@ -1,1 +1,2 @@
-export default browser;
+const chromeP = chrome;
+export default chromeP;
