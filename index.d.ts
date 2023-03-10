@@ -1,2 +1,3 @@
-const chromeP = chrome;
+import chromeP = chrome;
+
 export default chromeP;
