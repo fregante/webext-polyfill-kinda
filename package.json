@@ -1,6 +1,6 @@
 {
 	"name": "webext-polyfill-kinda",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Super-lightweight Promised wrapper around `chrome.*` API to be used in modules. Prefer `webextension-polyfill` if you’re using it directly in an extension.",
 	"keywords": [
 		"browser",
